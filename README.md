@@ -1,4 +1,4 @@
-# ADATA XPG 3-Segment USB Display Controller for Windows 11
+# ADATA XPG Maestro Plus 62DA 3-Segment USB Display Controller for Windows 11
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2011%20%7C%2010-blue.svg)](https://microsoft.com/windows)
 [![Device](https://img.shields.io/badge/USB%20HID-VID%200x125F%20%3A%20PID%200x7601-green.svg)](docs/xpg_display_communication.md)
