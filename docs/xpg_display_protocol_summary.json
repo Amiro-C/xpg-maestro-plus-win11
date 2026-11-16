@@ -1,0 +1,64 @@
+﻿{
+    "payload_structure_byte_map":  {
+                                       "byte_2":  "Mode / Version Flag (0x01)",
+                                       "byte_10":  "System Parameter / Multiplier (0x14 = 20)",
+                                       "byte_1":  "Command / Subtype Magic (0xA1)",
+                                       "byte_6":  "Telemetry Marker 1 (0x0A)",
+                                       "byte_8":  "Telemetry Marker 2 (0x0A)",
+                                       "bytes_11_13":  "Status Flags (0x07 0x07 0x07)",
+                                       "bytes_14_63":  "Zero Padding (0x00 * 50 bytes)",
+                                       "byte_7":  "Sensor Reading 1 / CPU Temp (Dynamic, e.g. 0x28=40C, 0x2E=46C)",
+                                       "byte_9":  "Sensor Reading 2 / Fan Speed / Status (Dynamic, e.g. 0x00, 0x06, 0x0C)",
+                                       "byte_0":  "Report ID (0x07)",
+                                       "bytes_3_5":  "Reserved Padding (0x00 0x00 0x00)"
+                                   },
+    "files_for_gemini_flash_light":  {
+                                         "extracted_payloads_json":  "xpg_display_payloads.json",
+                                         "protocol_summary_json":  "xpg_display_protocol_summary.json",
+                                         "tshark_raw_json":  "xpg_display_packets.json",
+                                         "full_documentation_md":  "xpg_display_communication.md",
+                                         "wireshark_binary_pcap":  "xpg_display_capture.pcapng"
+                                     },
+    "frame_sizes":  {
+                        "hid_report_payload_bytes":  64,
+                        "usbpcap_header_bytes":  28,
+                        "setup_data_header_bytes":  8,
+                        "set_report_response_total_frame_bytes":  28,
+                        "set_report_request_total_frame_bytes":  100
+                    },
+    "communication_protocol":  {
+                                   "report_type":  "Output (2)",
+                                   "wIndex":  "0x0000",
+                                   "wValue":  "0x0207",
+                                   "update_interval_ms":  1000,
+                                   "update_frequency_hz":  1,
+                                   "bRequest":  "0x09",
+                                   "request_type":  "USB HID SET_REPORT Control Transfer",
+                                   "bmRequestType":  "0x21",
+                                   "wLength":  64,
+                                   "report_id":  7
+                               },
+    "metadata":  {
+                     "device_name":  "XPG Segment Display / Hardware Controller",
+                     "vendor_name":  "A-DATA Technology Co., Ltd. (XPG)",
+                     "interface_class":  "USB HID (0x03)",
+                     "endpoints":  [
+                                       {
+                                           "type":  "Interrupt",
+                                           "interval":  1,
+                                           "direction":  "IN",
+                                           "max_packet_size":  64,
+                                           "address":  "0x81"
+                                       },
+                                       {
+                                           "type":  "Interrupt",
+                                           "interval":  1,
+                                           "direction":  "OUT",
+                                           "max_packet_size":  64,
+                                           "address":  "0x03"
+                                       }
+                                   ],
+                     "product_id":  "0x7601",
+                     "vendor_id":  "0x125F"
+                 }
+}
